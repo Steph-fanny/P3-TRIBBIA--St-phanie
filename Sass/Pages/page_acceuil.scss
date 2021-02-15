@@ -1,0 +1,88 @@
+@media screen and (min-width:350px) and (max-width: 767px){
+
+header{
+    background-color: $colour-bgc;
+      
+ }       
+
+.header_subtittle{ 
+    text-align: center;
+    }
+    
+.header_logo{
+    font-size:4em;
+    width:50%;
+    padding:10px 25%;
+    }   
+    
+/*rechercher ville*/
+.container_search_city{
+    @include flex_row;             
+    }
+         
+.fa-map-marker-alt{
+    display:flex!important;
+    justify-content: center;
+    height:100%;
+    width: 20px; 
+    color:black;
+    padding-right:8px;    
+    }
+
+.recherche_ville{
+    text-align:left;
+    background-color: $colour-bgc;
+    border:none;
+    }
+
+/*fonctionnement*/
+.fonctionnement_title{
+    font-size:1em;
+    }
+
+
+.etape{
+    padding:10px 0px;
+    
+}
+
+.secondary_btn{
+    width: 100%;
+    justify-content: flex-start;
+}
+
+ol {list-style: none; counter-reset: li;
+padding:0px;
+}
+
+li::before 
+    {content: counter(li); 
+        color: white;
+        background-color: $colour_primary;
+        border-radius:20px;   
+        padding:10px;
+        margin:10px;
+        height:14px;
+        width: 14px;
+        @include flex_column;
+                           
+        }
+       
+li {counter-increment: li;
+    @include flex_row;
+    }
+
+.icone{
+    padding: 10px;        
+    }      
+
+.fonctionnement_subtitle{
+   text-align: left;
+   padding: 10px 15px;
+   width: 100%;
+}
+
+
+}
+
+

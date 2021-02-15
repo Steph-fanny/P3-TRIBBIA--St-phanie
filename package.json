@@ -1,0 +1,19 @@
+{
+  "name": "package_p3.json",
+  "version": "1.0.0",
+  "description": "projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch Sass/main.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steph-fanny/P3-TRIBBIA--St-phanie.git"
+  },
+  "author": "Tribbia Stéphanie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Steph-fanny/P3-TRIBBIA--St-phanie/issues"
+  },
+  "homepage": "https://github.com/Steph-fanny/P3-TRIBBIA--St-phanie#readme"
+}

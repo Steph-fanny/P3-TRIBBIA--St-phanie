@@ -1,0 +1,17 @@
+.primary_btn{
+    @include btn;
+    background: $colour_secondary; 
+    color:white;
+    width: 50%;
+    padding:10px;
+    margin:12px 25%; 
+    }
+
+.secondary_btn{      
+    @include btn;  
+    background: $colour_bgc;   
+    border:none; 
+      
+    
+    }
+
