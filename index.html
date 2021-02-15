@@ -1,12 +1,178 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content ="Ohmyfood Réservez le menu qui vous convient">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet"  href="public/css/style.css"/>
+        <title>Projet3</title>                 
+        
+    </head>
+
+    <body>
+        <!--header-->
+        <header>
+
+        <!--logo-->    
+        <img class="header_logo" src ="public/img/logo/ohmyfood.png"  alt="logo ohmyfood"/>
+        <!--en tête navigation hors logo--> 
+        <nav class="container_search_city">          
+                <i class="fas fa-map-marker-alt"></i>
+                <form method="post" action="traitement.php">                             
+                <input class="recherche_ville" type="search" name="ville" placeholder="Paris, Belleville"/>
+                </form>   
+            
+        </nav>  
+
+        <h1>Réservez le menu qui vous convient</h1>
+        <p class="header_subtittle">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
+
+        <!--boutton-->
+        <button class="primary_btn">Explorer nos restaurants</button>
+
+        </header>  
+
+        <!--main-->
+        <main>
+            <!--Fonctionnement-->
+            <section class="fonctionnement">
+                <h2 class= "fonctionnement_title">Fonctionnement</h2>             
+                <div class="fonctionnement_etape">
+                    <ol class="liste_mumerotee">
+                        <!--Choisir un restaurant-->
+                        <div class="etape">
+                            <li class="puce_numerotee">
+                                <button class="secondary_btn">
+                                    <i class=" icone fas fa-mobile-alt"></i>                           
+                                    <span class="fonctionnement_subtitle">Choississez un restaurant</span>
+                                </button>                            
+                            </li>
+                        </div>
+                            
+
+                        <!--composez votre menu-->        
+                        <div class="etape">
+                            <li class="puce_numérotee">
+                                <button class="secondary_btn">
+                                    <i class="icone fas fa-list"></i>
+                                    <span>Composez votre menu</span>
+                                </button> 
+                        </div>
+
+                        <!--Degustez -->
+                        <div class="etape">
+                            <li class="puce_numérotee"> 
+                            <button class="secondary_btn"> 
+                                <i class="icone fas fa-store"></i>
+                                <span>Dégustez au restaurant</span>
+                            </button> 
+                        </div>
+                    </ol>
+                </div>
+            </section>
+
+            <!--restaurant-->
+            <section class="restaurant">
+                <h2 class="restaurant_titre">Restaurants</h2>
+                <div class="conteneur_liste_restaurant">
+                    <!--1 ere carte-->
+                    <article class="restaurant_card">
+                        <a class="card-lien" href="#"></a>
+                        <img class="image_card" 
+                        src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="image restaurant"/>
+                        <span class="card__badge">Nouveau</span>
+                        <!--descriptif-->
+                        <footer class="card_footer">
+                            <div class="card-descriptif">
+                                <h3>La palette du goût</h3>
+                                <p class="emplacement">Menilmontant</p>    
+                            </div>
+                            <div class ="card_footer-icone">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <!--2eme carte-->
+                    <article class="restaurant_card">
+                        <a class="card-lien" href="#"></a>
+                        <img class="image_card" 
+                        src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                        alt="image restaurant"/>
+                        <span class="card__badge">Nouveau</span>
+                        <!--descriptif-->
+                        <footer class="card_footer">
+                            <div class="card-descriptif">
+                                <h3>La note enchantée</h3>
+                                <p class="emplacement">Charonne</p>    
+                            </div>
+                            <div class ="card_footer-icone">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <!--3eme annonce-->
+                    <article class="restaurant_card">
+                        <a class="card-lien" href="#"></a>
+                        <img class="image_card" 
+                        src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                        alt="image restaurant"/>
+                        <span class="card__badge">Nouveau</span>
+                        <!--descriptif-->
+                        <footer class="card_footer">
+                            <div class="card-descriptif">
+                                <h3>A la francaise</h3>
+                                <p class="emplacement">Cité Rouge</p>    
+                            </div>
+                            <div class ="card_footer-icone">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <!--4me annonce-->                    
+                    <article class="restaurant_card">
+                        <a class="card-lien" href="#"></a>
+                        <img class="image_card" 
+                        src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                        alt="image restaurant"/>
+                        <span class="card__badge">Nouveau</span>
+                        <!--descriptif-->
+                        <footer class="card_footer">
+                            <div class="card-descriptif">
+                                <h3>Le délice des sens</h3>
+                                <p class="emplacement">Folie-Méricourt</p>    
+                            </div>
+                            <div class ="card_footer-icone">
+                                <i class="far fa-heart"></i>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!--footer-->
+        <footer>
+            <div class="footer_container">
+
+                <nav class="nav-footer">
+                <a class="footer__lien" href="#">
+                    <i class="footer__icone fas fa-utensils"></i>Proposer un restaurant</a>
+                <a class="footer__lien" href="#">
+                        <i class="footer__icone fas fa-hands-helping"></i>Devenir partenaire</a>
+                <a class="footer__lien" href="#">Mentions légales</a>   
+                <a class="footer__lien" href="#">Contact</a>
+                </nav>
+                
+            </div>
+
+        </footer>
+
     
 </body>
 </html>
