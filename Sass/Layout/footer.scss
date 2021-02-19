@@ -1,0 +1,35 @@
+.footer_container{        
+   background-color: $colour_bgc_textblack;
+&_logo{
+    width: 25%;
+    padding:10px;
+   }  
+}
+
+.nav_footer{
+@include flex_column;
+padding:10px;
+}
+
+.footer_lien{
+    color:$colour_bgc_textwhite;
+    text-decoration: none;
+    padding:5px 0px;
+&_icone{padding-right: 10px;}
+}  
+
+
+
+@media screen and (min-width:768px)  {
+.footer_container{
+    @include flex_column;
+    align-items: center;
+    }
+    
+.nav_footer{
+    @include flex_row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding:20px;
+    }
+}  

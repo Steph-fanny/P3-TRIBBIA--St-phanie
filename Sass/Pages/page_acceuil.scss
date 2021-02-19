@@ -1,23 +1,23 @@
-@media screen and (min-width:350px) and (max-width: 767px){
-
 header{
     background-color: $colour-bgc;
-      
- }       
+    padding-bottom: 15px;
+    }       
 
 .header_subtittle{ 
     text-align: center;
+    margin:0px;
     }
     
 .header_logo{
-    font-size:4em;
-    width:50%;
-    padding:10px 25%;
+    background-color:white;
+    width:40%;    
     }   
     
 /*rechercher ville*/
 .container_search_city{
-    @include flex_row;             
+    @include flex_row;   
+    background-color: grey;   
+    padding:10px 0px;       
     }
          
 .fa-map-marker-alt{
@@ -31,29 +31,25 @@ header{
 
 .recherche_ville{
     text-align:left;
-    background-color: $colour-bgc;
+    background-color: grey;
     border:none;
+    height:2em;
     }
 
 /*fonctionnement*/
-.fonctionnement_title{
-    font-size:1em;
-    }
-
-
 .etape{
-    padding:10px 0px;
-    
-}
+    padding:5px 0px;    
+    }
 
 .secondary_btn{
     width: 100%;
     justify-content: flex-start;
-}
+    padding:5px;
+    margin:0px;
+    }
 
 ol {list-style: none; counter-reset: li;
-padding:0px;
-}
+padding:0px; }
 
 li::before 
     {content: counter(li); 
@@ -61,11 +57,12 @@ li::before
         background-color: $colour_primary;
         border-radius:20px;   
         padding:10px;
-        margin:10px;
-        height:14px;
-        width: 14px;
-        @include flex_column;
-                           
+        margin:5px;
+        height:10px;
+        width: 10px;
+        @include flex_column;   
+        transform: translateX(50%);   
+        Z-index:2;                    
         }
        
 li {counter-increment: li;
@@ -73,16 +70,139 @@ li {counter-increment: li;
     }
 
 .icone{
-    padding: 10px;        
-    }      
+    padding: 10px 15px;  
+    }   
+   
+/*restaurant*/    
+.restaurant{
+    background-color: $colour-bgc;
+    }    
+.conteneur_liste_restaurant{
+    @include flex_column;   
+    align-items: center;   
+    padding: 25px 10px;
+    }
 
-.fonctionnement_subtitle{
-   text-align: left;
-   padding: 10px 15px;
-   width: 100%;
+.restaurant_card{
+    @include flex_column;   
+    background-color: white; 
+    width:100%;
+    height:12em;    
+    border-radius: 10px;
+    margin:10px;
+    position:relative;
+    z-index: 1;
+    }
+
+.image_card{
+    display:flex;
+    width: 100%;
+    max-height:70%;
+    border-radius: 10px 10px 0px 0px; 
+    object-fit: cover;
+    }
+
+.card_badge{
+    background-color: $colour_tertiary;
+    color:green;
+    position:absolute;  
+    top:5px;  
+    right:10px;
+    z-index:15;
+    }
+
+.card_footer{
+    @include flex_rowstart;
+   
+    margin:5px;
+    }
+
+.card_footer_descriptif{
+    @include flex_column;
+    }
+
+.card_footer_icone{
+     @include flex_column;
+    }
+.icone_coeur{
+    position:absolute;
+    right:20px;
+    font-size:1.1em;
+    
+}
+.card_footer_title,.card_footer_subtitle{
+        margin:0px;
+        padding:5px 0px;        
+        }
+.card_footer_title{
+    font-size:1em;
+    font-weight: bold;
+    }
+.card_footer_subtitle{
+    font-size:0.9em;
+    }
+
+
+/*TABLETTE et pc*/    
+@media screen and (min-width:768px)  {
+
+.header_logo{
+    background-color:white;
+    width:30%;
+    padding:10px 35%;
+    }   
+
+header{
+    width:70%;
+    margin:10px 15%;
+    background-color: white;
+}
+.container_search_city{
+    background-color: grey;   
+    width: 100%;
+    padding:10px 0px;       
+    }
+
+.fonctionnement_title{
+    text-align: center;
+    font-size: 1.2em;
+}
+.secondary_btn{
+    width: 33%;
+    }
+
+.restaurant_title{
+    font-size: 1.2em;
+    padding-left: 60px;
+}
+  
+.conteneur_liste_restaurant{   
+    @include flex_row;  
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-evenly;
+    padding:10px; 
+    }  
+.restaurant_card{
+    width:40%;
+    height: 14em;    
+    margin: 20px;
+}
+
+.footer_container{
+    @include flex_column;
+    align-items: center;
+    }
+
+.nav_footer{
+    @include flex_row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding:20px;
+    }
+   
 }
 
 
-}
 
 

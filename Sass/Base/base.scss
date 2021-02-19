@@ -1,5 +1,5 @@
 body{
-    color:$colour-text; 
+    color: $colour_bgc_textblack; 
     width: 100%;     
     margin:auto;
     padding:10px;
@@ -11,3 +11,15 @@ h1{
     text-align: center;
 }
 
+h2{
+    text-align: left;
+    padding: 30px 15px 10px 0px;
+    margin:0px;
+    width: 100%;
+    font-size:1em;
+ }
+
+.footer_container{
+    color:white;
+    background-color: black;
+   }
