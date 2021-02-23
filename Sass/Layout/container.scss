@@ -1,0 +1,28 @@
+/*titre restaurant et coeur*/ et /*conteneur descriptif_prix*/
+.menu-header,.subtittle_plat{
+    @include flex_row;
+    justify-content: space-between;
+}
+
+
+.entree_card,.plat_card,.dessert_card{
+    @include flex_column;
+    align-items: center;
+}
+
+/*tablete et pc*/
+@media screen and (min-width:991px)  {
+.container_entree,.container_plat{
+    @include flex_column;
+    width: 30%;
+    margin: 15px;
+}
+.container_choix_plat{
+    @include flex_row;
+}
+.btn_choix_plats{
+    margin:10px;
+}
+
+
+}

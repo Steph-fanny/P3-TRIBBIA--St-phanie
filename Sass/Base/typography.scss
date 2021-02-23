@@ -1,10 +1,43 @@
-/*Polices
-Logo et titres: Shrikhand
-Texte: Roboto */
+/*----sommaire----
+    -police:
+        logo, h1,h2,h3
+    -mise en page:
+        h1,h2
+        p
+    -page 2 à 6:
+        menu-title
+        tittle_plat
+             */
 
-p{font-family: 'Roboto', sans-serif;
-}
+/*Polices : Logo et titres: Shrikhand, Texte: Roboto */
 
-.logo, h1,h2,h3{
-    font-family: 'shrikhand', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&family=Shrikhand&display=swap');
+
+
+/*.logo, h1,h2,h3{
+    font-family:'Shrikhand', cursive,;
+    }*/
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+    }
+
+h2{
+    text-align: left;
+    padding: 40px 15px 10px 5px;
+    margin:0px;
+    width: 100%;
+    font-size:1em;
+    }
+p{
+    margin:0px;
+    }
+
+/*----page 2 à 6----*/
+/*titre des restaurants*/
+ .menu-title{
+     text-align: left;
+    }
+
+

@@ -1,35 +1,55 @@
-.footer_container{        
-   background-color: $colour_bgc_textblack;
-&_logo{
+/*----sommaire----
+    footer_container
+    footer_logo
+    nav_footer
+    footer_lien
+    footer_icone
+
+    
+
+/*footer iddentique aux 5 pages*/
+
+.footer_container{     
+    background-color: $colour_bgc_textblack;
+    padding-left: 10px;
+    /*tablette et pc*/ 
+    @media screen and (min-width:768px){
+        @include flex_column;
+        align-items: center;
+        }
+    }  
+
+
+.footer_logo{
     width: 25%;
     padding:10px;
-   }  
-}
+    }  
 
 .nav_footer{
-@include flex_column;
-padding:10px;
-}
+    @include flex_column;
+    padding:10px;
+    }
 
 .footer_lien{
     color:$colour_bgc_textwhite;
     text-decoration: none;
     padding:5px 0px;
-&_icone{padding-right: 10px;}
-}  
-
-
-
-@media screen and (min-width:768px)  {
-.footer_container{
-    @include flex_column;
-    align-items: center;
     }
+
+.footer_icone{
+    padding-right: 15px;}
+
+/*tablette et pc*/
+@media screen and (min-width:768px)
+{
+
     
 .nav_footer{
     @include flex_row;
     justify-content: space-evenly;
     width: 100%;
     padding:20px;
-    }
-}  
+    }  
+} 
+
+

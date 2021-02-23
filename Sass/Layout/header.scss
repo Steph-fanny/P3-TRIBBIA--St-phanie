@@ -1,8 +1,41 @@
+/*----sommaire----
+    --index--
+        header
+        header_logo
+    --page restaurant--
+        header_tittle
+        header_arrow
+        img_fond       */
+
+
 header{
     @include flex_column;
     align-items: center;
-&_logo{
-    background-color:white;
+    padding-bottom: 0px;
+    }
+
+.header_logo{
     width:40%;
+    margin-bottom: 10px;
     } 
-}
+
+/*page 2 à 5*/    
+.header_tittle{
+    @include flex_row;
+    padding-top: 10px;   
+    }
+
+.header_arrow{
+    position:absolute;
+    top:25px;
+    left:25px;
+    font-size:1.2em;
+    color:$colour_bgc_textblack;
+    }
+
+.img_fond{
+    max-height:300px;
+    width: 100%;  
+    object-fit:cover;
+    transform: translateY(20%);             
+    }

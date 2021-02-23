@@ -14,8 +14,11 @@
 <body>
     <!--header-->
     <header>
-        <!--logo-->    
+        <div class="header_tittle">
+        <a href="./index.html"><i class="header_arrow fas fa-arrow-left"></i></a>          
         <img class="header_logo" src ="public/img/logo/ohmyfood.png"  alt="logo ohmyfood"/>
+        </div>
+        <img class="img_fond" src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="image fond"/>
     </header>
 
     <main>
@@ -23,74 +26,106 @@
     <!--Menu-->
     <section class="menu">
         <div class="menu_header">
-            <h1 class="menu-title">A la francaise</h1>
-            <i class="far fa-heart icone_coeur"></i>
+        <h1 class="menu-title"> À la française<i class="far fa-heart icone_coeur"></i></h1>            
         </div>
-
+        <div class="container_choix_plat">
         <!--entree-->
         <div class="container_entree">
-            <p>ENTREES</p>
+            <p class="categorie_plat">ENTRÉES<p>
             <div class="entree_card">
                 <!-- 1 ere entree-->
-                <div class="choix_entree">
-                    <p class="entree-title">Tartare de poulpe acidulé</p>
-                    <p class="entree_subtitle">Aux zests d'orange</P>
-                    <p class="entree_price">25<i class="fas fa-euro-sign"></i></p>    
-                </div>
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Tartare de poulpe acidulé</p>
+                    <div class="subtittle_plat">
+                        <p>Aux zests d'orange</P>
+                        <span class="price_plat">25<i class="fas fa-euro-sign"></i></span>
+                    </div>    
+                </button>
                 <!-- 2 eme entree-->
-                <div class="choix_entree">
-                    <p class="entree-title">Velouté de légumes d'antan</p>
-                    <p class="entree_subtitle">Carotte,panais,topinambour</P>
-                    <p class="entree_price">35<i class="fas fa-euro-sign"></i></p>    
-                </div>
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Velouté de légumes d'antan</p>                    
+                    <div class="subtittle_plat">
+                        <p>Carotte,panais,topinambour</p>
+                        <span class="price_plat">35<i class="fas fa-euro-sign"></i></span>
+                    </div>   
+                </button>
                 <!-- 3 eme entree-->
-                <div class="choix_entree">
-                    <p class="entree-title">Soupe à l'oignon</p>
-                    <p class="entree_subtitle">Revisitée</P>
-                    <p class="entree_price">20<i class="fas fa-euro-sign"></i></p>    
-                </div>
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Soupe à l'oignon</p>
+                    <div class="subtittle_plat">
+                        <p>Revisitée</p>
+                        <span class="price_plat">20<i class="fas fa-euro-sign"></i></span>
+                    </div>                          
+                </button>
             </div>
         </div>
 
         <!--plats-->
         <div class="container_plat">
-            <p>PLATS</p>
+            <p class="categorie_plat">PLATS</p>
             <div class="plat_card">
                 <!-- 1 ere entree-->
-                <div class="choix_plat">
-                    <p class="plat-title">Coquilles Saint-Jacques</p>
-                    <p class="plat_subtitle">Accompagnées d'une purée de panais</P>
-                    <p class="plat_price">40<i class="fas fa-euro-sign"></i></p>    
-                </div>
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Coquilles Saint-Jacques</p>
+                    <div class="subtittle_plat">
+                        <p>Accompagnées d'une purée de panais</p>
+                        <span class="price_plat">40<i class="fas fa-euro-sign"></i></span>
+                    </div>                    
+                </button>
                 <!-- 2 eme plat-->
-                <div class="choix_plat">
-                    <p class="plat-title">Magret de canard</p>
-                    <p class="plat_subtitle">Et parmentier de pommes de terres</P>
-                    <p class="plat_price">35<i class="fas fa-euro-sign"></i></p>    
-                </div>
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Magret de canard</p>
+                    <div class="subtittle_plat">
+                        <p>Et parmentier de pommes de terres</p>
+                        <span class="price_plat">35<i class="fas fa-euro-sign"></i></span>
+                    </div>                              
+                </button>
                 <!-- 3 eme plat-->
-                <div class="choix_plat">
-                    <p class="plat-title">Pigeonneau d'Ille-et-Vilaine</p>
-                    <p class="plat_subtitle">Sur son lit de gnocchis aux légumes</P>
-                    <p class="plat_price">44<i class="fas fa-euro-sign"></i></p>    
-                </div> 
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Pigeonneau d'Ille-et-Vilaine</p>
+                    <div class="subtittle_plat">
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                        <span class="price_plat">44<i class="fas fa-euro-sign"></i></span>
+                    </div>                     
+                </button>
+
             </div>
         </div>
 
         <!--desserts-->
         <div class="container_plat">
-            <p>DESSERT</p>
-            <div class="plat_card">
+            <p class="categorie_plat">DESSERT</p>
+            <div class="dessert_card">
                 <!-- 1 ere dessert-->
-                <div class="choix_dessert">
-                    <p class="dessert-title">Magret de canard</p>
-                    <p class="dessert_subtitle">Et parmentier de pommes de terres</P>
-                    <p class="dessert_price">35<i class="fas fa-euro-sign"></i></p>    
-                </div>
-
-
-
-
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Pétales de violettes glacés</p>
+                    <div class="subtittle_plat">
+                        <p>Et purée de noisettes</p>
+                        <span class="price_plat">18<i class="fas fa-euro-sign"></i></span>
+                    </div>                         
+                </button>
+                <!-- 2 eme dessert-->
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Fondant au chocolat</p>
+                    <div class="subtittle_plat">
+                        <p>Revisité</p>
+                        <span class="price_plat">22<i class="fas fa-euro-sign"></i></span>
+                    </div>                   
+                </button>
+                <!-- 3 eme dessert-->
+                <button class="btn_choix_plats">
+                    <p class="tittle_plat">Millefeuille croustillant</p>
+                    <div class="subtittle_plat">
+                        <p>Myrtilles et pâte d'amande</p>
+                        <span class="price_plat">23<i class="fas fa-euro-sign"></i></span>
+                    </div>  
+                </button>
+            </div>   
+        </div>
+        </div> 
+            <!--boutton-->
+            <button class="primary_btn">Commander</button>
+    </div>    
     </section>
 
     </main>

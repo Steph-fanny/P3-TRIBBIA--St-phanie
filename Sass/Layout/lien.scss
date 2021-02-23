@@ -1,0 +1,14 @@
+/*----sommaire----
+    lien vers autres pages
+        card_lien
+        footer_lien
+        */
+
+
+.card_lien{
+    display:block;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}

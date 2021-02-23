@@ -33,6 +33,10 @@
     align-items: center;      
     border-radius:20px;
     height: 100%;
+    cursor: pointer;
     }
 
+@mixin btn_primary{
+    color:linear-gradient($colour_secondary,70%,$colour_primary);
+}
 

@@ -1,17 +1,63 @@
 .primary_btn{
     @include btn;
-    background: $colour_secondary; 
+    background:linear-gradient($colour_secondary,70%,$colour_primary);
     color:white;
-    width: 50%;
+    width: 60%;
     padding:10px;
-    margin:20px 25%; 
+    margin:20px auto; 
+    z-index: 1;
+/*au survol:s'eclairci*/
+    &:hover{
+        background:lighten($colour_secondary,10%);
+        }
+        
+        @media #{$screen-lm-min}{      
+        width:40%;
+    }	
+
     }
 
 .secondary_btn{      
     @include btn;  
     background: $colour_bgc;   
-    border:none; 
-      
-    
+    border:none;  
+    width: 100%;
+    justify-content: flex-start;
+    padding:5px;
+    margin:0px;    
+    transform:translateX(-10px);     
     }
+
+    
+
+/*----page 2 à 6----*/
+.btn_choix_plats{
+    @include flex_column;     
+    flex-wrap: wrap;
+    border-radius: 12px;
+    width: 100%;
+    height: 5em;
+    margin:10px 0px;
+    @media #{$screen-md-min}{
+        @include flex_row;
+        margin:8px;
+        height:7em;
+    }    
+}
+
+/*titre plats*/
+.tittle_plat{
+   text-align: left;
+   padding-bottom: 5px;
+   font-weight: bolder;
+   font-size: 1.2em;    
+   }
+.tittle_plat,.subtittle_plat{
+    width: 100%;
+    text-align: left;
+    padding-bottom: 5px;
+    }
+
+
+
 
