@@ -1,6 +1,6 @@
 .primary_btn{
     @include btn;
-    background:linear-gradient($colour_secondary,70%,$colour_primary);
+    background:linear-gradient($colour_secondary,55%,$colour_primary);
     color:white;
     width: 60%;
     padding:10px;
@@ -8,9 +8,8 @@
     z-index: 1;
 /*au survol:s'eclairci*/
     &:hover{
-        background:lighten($colour_secondary,10%);
+        background:linear-gradient(lighten($colour_secondary,5%),55%,lighten($colour_primary,5%));
         }
-        
         @media #{$screen-lm-min}{      
         width:40%;
     }	
@@ -32,17 +31,15 @@
 
 /*----page 2 à 6----*/
 .btn_choix_plats{
-    @include flex_column;     
-    flex-wrap: wrap;
+    @include flex_row;         
     border-radius: 12px;
     width: 100%;
-    height: 5em;
-    margin:10px 0px;
-    @media #{$screen-md-min}{
-        @include flex_row;
-        margin:8px;
-        height:7em;
-    }    
+    height: 5em;   
+    padding:0px;
+    margin:10px;
+    
+    cursor: pointer;
+    
 }
 
 /*titre plats*/
