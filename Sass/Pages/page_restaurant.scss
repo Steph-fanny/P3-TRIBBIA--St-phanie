@@ -11,6 +11,20 @@
     width: 40px;
 }
 
+/*titre plats*/
+.tittle_plat{
+  text-align: left;
+  padding-bottom: 5px;
+  font-weight: bolder;
+  font-size: 1.2em;    
+  }
+.tittle_plat,.subtittle_plat{
+   width: 100%;
+   text-align: left;
+   padding-bottom: 5px;
+   }
+
+   
 
 .choix_plat_confirmation{
   display:flex;
@@ -20,35 +34,27 @@
   width: 75px;
   height: 100%;
   margin-right: -75px;
-  border-radius:0px 12px 12px 0px ;  
+  border-radius:0px 12px 12px 0px ;
+  opacity:0%;
   
    
 }
 .icone_check{
   font-size: 1.6em;
   color:darken($colour_tertiary,60%);
-  transform:rotate(180deg);
-  transition-duration:.8s;
-  &:hover{
-    transform: rotate(0deg);
   }
-
+  
+.choix_plat_confirmation_icone{
+  transform:rotate(180deg);   
+  transition:transform 1s 150ms;
 }
-
 .container_info{
   @include flex_column;
   flex-wrap: wrap;
   margin:10px 0px;
   width: 100%;
-  padding:0px 10px;
-  @media #{$screen-md-min}{
-
-  @media #{$screen-md-min}{
-    @include flex_row;
-    margin:8px;
-    height:7em;
+  padding:0px 10px; 
+ 
 }    
 
 
-}
-}
