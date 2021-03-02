@@ -40,3 +40,10 @@
     color:linear-gradient($colour_secondary,70%,$colour_primary);
 }
 
+@mixin ombrage{
+    box-shadow: 0px 2px 3px $colour_ombrage;
+    &:hover{ 
+        box-shadow: 0px 4px 6px $colour_ombrage;
+
+    }
+}

@@ -106,8 +106,9 @@ li {counter-increment: li;
     }
 
 .card_footer{
-    @include flex_rowstart;
-   
+    @include flex_row;
+    justify-content: space-between;
+    width: 100%;
     margin:5px;
     }
 
@@ -115,13 +116,10 @@ li {counter-increment: li;
     @include flex_column;
     }
 
-.card_footer_icone{
-     @include flex_column;
-    }
+
 .icone_coeur{
-    position:absolute;
-    right:20px;
-    font-size:1em;    
+    
+    font-size:1.5em;    
     background-color: $colour_bgc_textwhite;
 }
 
