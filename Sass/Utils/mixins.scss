@@ -2,29 +2,28 @@
         font-size:3em;
         width:50%;
         padding:10px 25%;
-        } 
-
+} 
 
 @mixin flex_column{
     display:flex;
     flex-direction:column;
     justify-content: center;
     align-items: flex-start;
-    }
+}
 
 @mixin flex_row{
     display:flex;
     flex-direction:row;
     justify-content:center;
     align-items: center;
-    }
+}
 
 @mixin flex_rowstart{
     display:flex;
     flex-direction: row;
     justify-content:flex_start;
     align-items: center;
-    }
+}
 
 @mixin btn{
     display: flex; 
@@ -34,7 +33,7 @@
     border-radius:20px;
     height: 100%;
     cursor: pointer;
-    }
+}
 
 @mixin btn_primary{
     color:linear-gradient($colour_secondary,70%,$colour_primary);

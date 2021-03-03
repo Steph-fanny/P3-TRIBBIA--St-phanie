@@ -18,29 +18,30 @@
             <div class="spin" id="loader"></div>
             <div class="spin" id="loader2"></div>
             <div class="spin" id="loader3"></div>            
-            <span id="text"><img class="loading_logo" src ="public/img/logo/ohmyfood.png"  alt="logo ohmyfood"/></br>Loading...</span>
+            <span id="text">
+                <img class="loading_logo" src ="public/img/logo/ohmyfood.png" alt="logo ohmyfood"/>
+                </br>Loading...</span>
         </div>    
         <!--header-->
-        <header>
+        <header class="header_pacceuil">
             <!--logo-->  
-            <img class="header_logo" src ="public/img/logo/ohmyfood.png"  alt="logo ohmyfood"/>
+            <img class="header_logo" src ="public/img/logo/ohmyfood.png" alt="logo ohmyfood"/>
             <!--en tête navigation hors logo--> 
             <div class="fond_gris_header_horslogo">
-            <nav class="container_search_city">          
-                <i class="fas fa-map-marker-alt"></i>
-                <form method="post" action="traitement.php">                             
-                <input class="recherche_ville" type="search" name="ville" placeholder="Paris, Belleville"/>
-                </form>  
-            </nav>  
-
-            <h1>Réservez le menu qui vous convient</h1>
-            <p class="header_subtittle">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
-            <!--boutton-->
-            <button class="primary_btn">Explorer nos restaurants</button>
-        </div>
+                <nav class="container_search_city">          
+                    <i class="fas fa-map-marker-alt"></i>
+                    <form method="post" action="traitement.php">                             
+                    <input class="recherche_ville" type="search" name="ville" placeholder="Paris, Belleville"/>
+                    </form>  
+                </nav>  
+                <h1>Réservez le menu qui vous convient</h1>
+                <p class="header_subtittle">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
+                <!--boutton-->
+                <button class="primary_btn">Explorer nos restaurants</button>
+            </div>
         </header>  
 
-        <main>
+        <main class="main_pacceuil">
             <!--Fonctionnement-->
             <section class="fonctionnement">
                 <h2 class= "fonctionnement_title">Fonctionnement</h2>             
@@ -97,10 +98,9 @@
                                 <p class="card_footer_subtitle">Menilmontant</p> 
                             </div>    
                             <button class="card_footer_button_heart">  
-                                <i class="far fa-heart icone_coeur"></i>
-                               
-                            </button>    
-                            
+                                <i class="far fa-heart icone_coeur"></i> 
+                                <i class="fa fa-heart icone_coeur_after"></i>                             
+                            </button>  
                         </footer>
                     </article>
 
@@ -117,9 +117,9 @@
                                 <p class="card_footer_title">La note enchantée</P>
                                 <p class="card_footer_subtitle">Charonne</p>    
                             </div>
-                            <div class ="card_footer-icone">
-                                <i class="far fa-heart icone_coeur"></i>
-                            </div>
+                            <button class="card_footer_button_heart">  
+                                <i class="fas fa-heart icone_coeur"></i>                               
+                            </button>
                         </footer>
                     </article>
 
@@ -135,9 +135,9 @@
                                 <p class="card_footer_title">A la francaise</P>
                                 <p class="card_footer_subtitle">Cité Rouge</p>    
                             </div>
-                            <div class ="card_footer-icone">
-                                <i class="far fa-heart icone_coeur"></i>
-                            </div>
+                            <button class="card_footer_button_heart">  
+                                <i class="fas fa-heart icone_coeur"></i>                               
+                            </button>
                         </footer>
                     </article>
 
@@ -153,9 +153,9 @@
                                 <p class="card_footer_title">Le délice des sens</P>
                                 <p class="card_footer_subtitle">Folie-Méricourt</p>  
                             </div>
-                                <div class ="card_footer_icone">
-                                    <i class="far fa-heart icone_coeur"></i>
-                                </div>                               
+                            <button class="card_footer_button_heart">  
+                                <i class="fas fa-heart icone_coeur"></i>                               
+                            </button>                             
                         </footer>
                     </article>
                 </div>
@@ -163,9 +163,9 @@
         </main>
 
         <!--footer-->
-        <footer>
+        <footer class="footer_pacceuil">
             <div class="footer_container">
-                <img class="footer_logo" src ="public/img/logo/ohmyfood_footer.png"  alt="logo ohmyfood"/>
+                <img class="footer_logo" src ="public/img/logo/ohmyfood_footer gris.png"  alt="logo ohmyfood"/>
                 <nav class="nav_footer">
                     <a class="footer_lien" href="#">                    
                         <i class="footer_icone fas fa-utensils"></i>Proposer un restaurant</a>
@@ -175,8 +175,6 @@
                     <a class="footer_lien" href="mailto:contact@ohmyfood.com">Contact</a>
                 </nav>                
             </div>
-        </footer>
-        
-            
+        </footer>     
     </body>
 </html>

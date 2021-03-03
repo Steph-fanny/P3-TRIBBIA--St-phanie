@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*---sommaire----
+    couleur
+    animation
+    media queries*/
+/*couleur*/
 /*animation*/
 /*media queries*/
 /*tablette*/
@@ -50,6 +55,15 @@ p {
   font-family: "Shrikhand", cursive;
 }
 
+/*----sommaire----
+    -primary_btn: couleur dégradé, eclaircissement au survol, et changement taille version tablette
+    -secondary_btn : bouton p. acceuil fonctionnement, au survol: couleur legerement violette
+    -card_footer_button_heart : bouton j'aime
+
+    -btn_choix_plats: pour p2 à 5: restaurant
+        *animation apparition
+        *ombrage + important au survol
+*/
 .primary_btn {
   display: flex;
   flex-direction: row;
@@ -58,13 +72,20 @@ p {
   border-radius: 20px;
   height: 100%;
   cursor: pointer;
+  box-shadow: 0px 2px 3px gray;
+  border: none;
   background: linear-gradient(#FF79DA, 55%, #9356DC);
   color: white;
-  width: 60%;
-  padding: 10px;
-  margin: 20px auto;
-  z-index: 1;
+  width: 65%;
+  padding: 15px;
+  margin: 30px auto 40px;
+  position: relative;
+  z-index: 4;
   /*au survol:s'eclairci*/
+  /*version tablette*/
+}
+.primary_btn:hover {
+  box-shadow: 0px 4px 6px gray;
 }
 .primary_btn:hover {
   background: linear-gradient(#ff93e1, 55%, #a16be0);
@@ -84,13 +105,17 @@ p {
   border-radius: 20px;
   height: 100%;
   cursor: pointer;
+  box-shadow: 0px 2px 3px gray;
   background: #e7e4e4;
   border: none;
   width: 100%;
   justify-content: flex-start;
-  padding: 5px;
+  padding: 10px;
   margin: 0px;
   transform: translateX(-10px);
+}
+.secondary_btn:hover {
+  box-shadow: 0px 4px 6px gray;
 }
 .secondary_btn:hover {
   background-color: #e4d5f6;
@@ -110,18 +135,17 @@ p {
   cursor: pointer;
 }
 
-.card_footer_button_heart::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  content: "";
-  background: linear-gradient(#FF79DA, 55%, #9356DC);
-  transition: 0.5s;
-}
-
+/*.card_footer_button_heart::before{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    opacity: 0;
+    content: "";
+    background:linear-gradient($colour_secondary,55%,$colour_primary);
+    transition:.5s;
+} */
 /*----page 2 à 6----*/
 .btn_choix_plats {
   display: flex;
@@ -144,10 +168,12 @@ p {
 }
 
 /*----sommaire----
-    --index--
+    -page d'acceuil
         header
         header_logo
-    --page restaurant--
+        barre de recherche ville
+
+    -page restaurant
         header_tittle
         header_arrow
         img_fond       */
@@ -157,7 +183,7 @@ header {
   justify-content: center;
   align-items: flex-start;
   align-items: center;
-  padding-bottom: 0px;
+  padding-bottom: 15px;
 }
 
 .header_logo {
@@ -165,7 +191,8 @@ header {
   margin-bottom: 10px;
 }
 
-/*page 2 à 5*/
+/*--page acceuil--*/
+/*--page 2 à 5--*/
 .header_tittle {
   display: flex;
   flex-direction: row;
@@ -194,10 +221,7 @@ header {
     footer_logo
     nav_footer
     footer_lien
-    footer_icone
-
-
-
+    footer_icone */
 /*footer iddentique aux 5 pages*/
 .footer_container {
   background-color: #292828;
@@ -252,8 +276,8 @@ header {
 /*----sommaire----
     lien vers autres pages
         card_lien
-        footer_lien
-        */
+
+*/
 .card_lien {
   display: block;
   position: absolute;
@@ -262,7 +286,16 @@ header {
   z-index: 2;
 }
 
-/*loading spinner*/
+/*----sommaire----
+  page acceuil:
+    - loading spinner : page d'acceuil : 3s      
+    -disparition/ apparition de la page lors du chargement :  
+
+  page restaurant:    
+    -apparition plats: @keyframes apparition_btn, apparition plat (1à9)  
+    -barre de validation des plats : au survol: partie verte +icone validation en rotation
+*/
+/*----loading spinner----*/
 .spin-container {
   text-align: center;
   height: 12em;
@@ -356,7 +389,8 @@ header {
   width: 6em;
 }
 
-header, main, footer {
+/*----apparition/disparition page au chargement----*/
+.header_pacceuil, .main_pacceuil, .footer_pacceuil {
   z-index: 2;
   animation: apparition_body 4s;
 }
@@ -381,7 +415,7 @@ header, main, footer {
     opacity: 1;
   }
 }
-/*apparition plats*/
+/*----apparition plats----*/
 @keyframes apparition_btn {
   0% {
     transform: scale(0);
@@ -449,13 +483,12 @@ header, main, footer {
 }
 
 /*remplissage coeur*/
-.icone_coeur {
-  background-color: white;
-}
-.icone_coeur:hover {
-  animation: couleur_coeur 1s;
-}
-
+/*.icone_coeur{
+  background-color: $colour_bgc_textwhite;
+  &:hover{
+    animation:couleur_coeur 1s;
+  }
+}*/
 /*titre restaurant et coeur*/
 et .menu-header,
 .subtittle_plat {
@@ -496,10 +529,6 @@ et .menu-header,
     margin: 10px;
   }
 }
-header {
-  padding-bottom: 15px;
-}
-
 .fond_gris_header_horslogo {
   background-color: #e7e4e4;
   width: 100%;
@@ -551,10 +580,10 @@ li::before {
   color: white;
   background-color: #9356DC;
   border-radius: 20px;
-  padding: 10px;
-  margin: 5px 0px 5px 10px;
-  height: 10px;
-  width: 10px;
+  padding: 8px;
+  margin: 5px 0px 5px 5px;
+  height: 8px;
+  width: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -593,6 +622,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  box-shadow: 0px 2px 3px gray;
   justify-content: space-between;
   background-color: white;
   width: 100%;
@@ -601,6 +631,9 @@ li {
   margin: 10px;
   position: relative;
   z-index: 1;
+}
+.restaurant_card:hover {
+  box-shadow: 0px 4px 6px gray;
 }
 
 .image_card {
@@ -640,8 +673,28 @@ li {
 }
 
 .icone_coeur {
+  position: absolute;
+  opacity: 1;
   font-size: 1.5em;
-  background-color: white;
+  z-index: 3;
+  transition: 1s;
+}
+.icone_coeur:hover {
+  opacity: 0;
+  Z-index: 1;
+}
+
+.icone_coeur_after {
+  opacity: 0;
+  font-size: 1.6em;
+  position: absolute;
+  color: linear-gradient(#FF79DA, 55%, #9356DC);
+  transition: 0.5s;
+}
+.icone_coeur_after:hover {
+  z-index: 4;
+  opacity: 1;
+  animation: apparition_coeur 0.5s 0s ease-in-out both;
 }
 
 .card_footer_title, .card_footer_subtitle {
