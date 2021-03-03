@@ -14,8 +14,8 @@
 @media screen and (min-width:991px)  {
 .container_entree,.container_plat{
     @include flex_column;
-    width: 30%;
-    margin: 15px;
+    width: 100%;
+    margin: 15px 5px;
 }
 .container_choix_plat{
     @include flex_row;

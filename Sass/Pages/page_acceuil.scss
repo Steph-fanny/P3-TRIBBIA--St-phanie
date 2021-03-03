@@ -114,23 +114,23 @@ li {counter-increment: li;
 }
 
 
-.icone_coeur{ 
-    position:absolute;
+.icone_coeur{     
     opacity:1;   
-    font-size:1.5em; 
-    z-index:3;  
+    font-size:1.4em;     
     transition:1s;
-&:hover{opacity:0;
-    Z-index:1;
+    z-index:2;    
+&:hover{opacity:0;   
+   
     }   
 }
 
 .icone_coeur_after {
     opacity:0;
-    font-size:1.6em;
+    font-size:1.4em;
     position:absolute;
     color:linear-gradient($colour_secondary,55%,$colour_primary);
     transition:.5s;  
+    z-index: 1;
      
     &:hover{
     z-index:4;
@@ -185,7 +185,7 @@ li {counter-increment: li;
 
     .restaurant_title{
         font-size: 1.2em;
-        padding-left: 60px;
+        padding-left: 65px;
     }
     
     .conteneur_liste_restaurant{   

@@ -5,8 +5,12 @@
     Z-index:1;
     position:relative;
 }   
+.coeur_restau{
+  padding-right: 14px;
+  font-size:1.2em;
+}
 
-  .categorie_plat{
+.categorie_plat{
     border-bottom: solid 2px $colour_tertiary;
     width: 40px;
 }
@@ -23,6 +27,10 @@
    width: 100%;
    text-align: left;
    padding-bottom: 5px;
+}
+
+.price_plat{
+  padding-right:5px;
 }
  
 .choix_plat_confirmation{

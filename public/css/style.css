@@ -51,6 +51,11 @@ p {
 /*----page 2 à 6----*/
 /*titre des restaurants*/
 .menu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   text-align: left;
   font-family: "Shrikhand", cursive;
 }
@@ -155,7 +160,7 @@ p {
   box-shadow: 0px 2px 3px gray;
   border-radius: 12px;
   width: 100%;
-  height: 5em;
+  height: 6em;
   padding: 0px;
   margin: 10px;
   border: none;
@@ -213,7 +218,7 @@ header {
   max-height: 300px;
   width: 100%;
   object-fit: cover;
-  transform: translateY(20%);
+  transform: translateY(15%);
 }
 
 /*----sommaire----
@@ -460,6 +465,10 @@ header {
   animation-delay: 0.8s;
 }
 
+.apparition_plat_10 {
+  animation-delay: 1s;
+}
+
 /*barre de validation plat*/
 @keyframes rotation_icone {
   from {
@@ -483,12 +492,17 @@ header {
 }
 
 /*remplissage coeur*/
-/*.icone_coeur{
-  background-color: $colour_bgc_textwhite;
-  &:hover{
-    animation:couleur_coeur 1s;
+@keyframes apparition_coeur {
+  0% {
+    opacity: 0;
   }
-}*/
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*titre restaurant et coeur*/
 et .menu-header,
 .subtittle_plat {
@@ -514,8 +528,8 @@ et .menu-header,
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 30%;
-    margin: 15px;
+    width: 100%;
+    margin: 15px 5px;
   }
 
   .container_choix_plat {
@@ -673,23 +687,22 @@ li {
 }
 
 .icone_coeur {
-  position: absolute;
   opacity: 1;
-  font-size: 1.5em;
-  z-index: 3;
+  font-size: 1.4em;
   transition: 1s;
+  z-index: 2;
 }
 .icone_coeur:hover {
   opacity: 0;
-  Z-index: 1;
 }
 
 .icone_coeur_after {
   opacity: 0;
-  font-size: 1.6em;
+  font-size: 1.4em;
   position: absolute;
   color: linear-gradient(#FF79DA, 55%, #9356DC);
   transition: 0.5s;
+  z-index: 1;
 }
 .icone_coeur_after:hover {
   z-index: 4;
@@ -741,7 +754,7 @@ li {
 
   .restaurant_title {
     font-size: 1.2em;
-    padding-left: 60px;
+    padding-left: 65px;
   }
 
   .conteneur_liste_restaurant {
@@ -773,6 +786,11 @@ li {
   position: relative;
 }
 
+.coeur_restau {
+  padding-right: 14px;
+  font-size: 1.2em;
+}
+
 .categorie_plat {
   border-bottom: solid 2px #99E2D0;
   width: 40px;
@@ -790,6 +808,10 @@ li {
   width: 100%;
   text-align: left;
   padding-bottom: 5px;
+}
+
+.price_plat {
+  padding-right: 5px;
 }
 
 .choix_plat_confirmation {
