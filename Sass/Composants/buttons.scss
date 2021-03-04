@@ -46,6 +46,7 @@
 }
 .card_footer_button_heart{
     @include flex_column;
+    background-color: $colour_bgc_textwhite;
     align-items: center;
     height:2em;
     width: 2em;
@@ -53,18 +54,24 @@
     margin-right: 20px;
     border:none;
     cursor: pointer;
+    z-index:3;
 }
-/*.card_footer_button_heart::before{
-    position:absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width: 100%;
-    opacity: 0;
-    content: "";
-    background:linear-gradient($colour_secondary,55%,$colour_primary);
-    transition:.5s;
-} */  
+.card_footer_button_heart{
+    &:hover{
+        
+        .icone_coeur{
+            opacity:0;
+        }
+        .icone_coeur_after{
+            opacity:1;
+            
+        }
+    }
+}
+    
+   
+    
+
 
 /*----page 2 à 6----*/
 .btn_choix_plats{

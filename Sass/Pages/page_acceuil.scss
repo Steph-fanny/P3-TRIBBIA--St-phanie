@@ -113,35 +113,29 @@ li {counter-increment: li;
     @include flex_column;
 }
 
-
-.icone_coeur{     
+.icone_coeur{        
     opacity:1;   
     font-size:1.4em;     
     transition:1s;
-    z-index:2;    
-&:hover{opacity:0;   
-   
-    }   
+        
+      
+      
 }
 
-.icone_coeur_after {
+.icone_coeur_after{
     opacity:0;
     font-size:1.4em;
-    position:absolute;
-    color:linear-gradient($colour_secondary,55%,$colour_primary);
-    transition:.5s;  
-    z-index: 1;
-     
-    &:hover{
-    z-index:4;
-    opacity:1;
-    animation:apparition_coeur .5s 0s ease-in-out both;
-    }
+    position:absolute;    
+    transition: 1s;  
+    background: -webkit-gradient(linear, left top, left bottom, from($colour_secondary), to($colour_primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+    
+      
+    
   }
     
-
-
-
 .card_footer_title,.card_footer_subtitle{
     margin:0px;               
     }
