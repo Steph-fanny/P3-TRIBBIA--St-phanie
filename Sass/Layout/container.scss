@@ -14,11 +14,19 @@
     @include flex_column;   
     align-items: center;   
     padding: 0px 10px 25px 10px;
+    /*version tablette*/
+    @media screen and (min-width:768px){
+        @include flex_row;  
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: space-evenly;
+        padding:10px; 
+    } 
 }
 
 
 
-
+/*page restaurants*/
 
 
 /*titre restaurant et coeur*/ et /*conteneur descriptif_prix*/
@@ -33,6 +41,15 @@
     align-items: center;
     width: 100%;
 }
+/*info bouton choix plats*/
+.container_info{
+    @include flex_column;
+    flex-wrap: wrap;
+    margin:10px 0px;
+    width: 100%;
+    padding:0px 10px;
+}  
+
 
 /*tablete et pc*/
 @media screen and (min-width:991px)  {

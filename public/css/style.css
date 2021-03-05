@@ -7,6 +7,11 @@
 /*animation*/
 /*media queries*/
 /*tablette*/
+/*----sommaire----
+    logo
+    flex 
+    btn
+    ombrage*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&family=Shrikhand&display=swap");
 body {
   color: #000000;
@@ -192,6 +197,11 @@ p {
   width: 20px;
   color: black;
   transform: translateX(15px);
+}
+
+/*icone partie fonctionnement*/
+.icone {
+  padding: 10px 15px 10px 20px;
 }
 
 .icone_coeur {
@@ -585,8 +595,22 @@ header {
   align-items: flex-start;
   align-items: center;
   padding: 0px 10px 25px 10px;
+  /*version tablette*/
+}
+@media screen and (min-width: 768px) {
+  .conteneur_liste_restaurant {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
 }
 
+/*page restaurants*/
 /*titre restaurant et coeur*/
 et .menu-header,
 .subtittle_plat {
@@ -604,6 +628,18 @@ et .menu-header,
   align-items: flex-start;
   align-items: center;
   width: 100%;
+}
+
+/*info bouton choix plats*/
+.container_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+  width: 100%;
+  padding: 0px 10px;
 }
 
 /*tablete et pc*/
@@ -680,10 +716,6 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.icone {
-  padding: 10px 15px 10px 20px;
 }
 
 /*restaurant*/
@@ -794,17 +826,6 @@ li {
     padding-left: 65px;
   }
 
-  .conteneur_liste_restaurant {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 10px;
-  }
-
   .restaurant {
     border-radius: 10px 10px 0px 0px;
   }
@@ -861,17 +882,6 @@ li {
 .choix_plat_confirmation_icone {
   transform: rotate(180deg);
   transition: transform 1s 150ms;
-}
-
-.container_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin: 10px 0px;
-  width: 100%;
-  padding: 0px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,3 @@
-
-
 /*page d'accueil*/
 
 /*icone localisation recherche ville*/
@@ -10,11 +8,17 @@
     transform:translateX(15px);   
 }
 
+/*icone partie fonctionnement*/
+.icone{
+    padding: 10px 15px 10px 20px;  
+} 
+
 .icone_coeur{        
     opacity:1;   
     font-size:1.4em;     
     transition:1s;      
 }
+
 .icone_coeur_after{
     opacity:0;
     font-size:1.4em;
@@ -31,4 +35,4 @@
 .icone_check{
     font-size: 1.6em;
     color:darken($colour_tertiary,60%);
-    }
+}

@@ -57,14 +57,12 @@
     z-index:3;
 }
 .card_footer_button_heart{
-    &:hover{
-        
+    &:hover{        
         .icone_coeur{
             opacity:0;
         }
         .icone_coeur_after{
-            opacity:1;
-            
+            opacity:1;            
         }
     }
 }

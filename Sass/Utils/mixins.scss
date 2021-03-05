@@ -1,3 +1,10 @@
+/*----sommaire----
+    logo
+    flex 
+    btn
+    ombrage*/
+
+
 @mixin logo_header{
         font-size:3em;
         width:50%;
@@ -43,6 +50,5 @@
     box-shadow: 0px 2px 3px $colour_ombrage;
     &:hover{ 
         box-shadow: 0px 4px 6px $colour_ombrage;
-
     }
 }

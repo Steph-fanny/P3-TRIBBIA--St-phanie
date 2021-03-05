@@ -41,10 +41,6 @@ li::before
 li {counter-increment: li;
     @include flex_row;
     }
-
-.icone{
-    padding: 10px 15px 10px 20px;  
-    }   
    
 /*restaurant*/    
 .restaurant{
@@ -96,7 +92,7 @@ li {counter-increment: li;
    
 .card_footer_title,.card_footer_subtitle{
     margin:0px;               
-    }
+}
 
 .card_footer_title{
     font-size:1em;
@@ -135,13 +131,7 @@ header{
     padding-left: 65px;
 }
     
-.conteneur_liste_restaurant{   
-    @include flex_row;  
-    flex-wrap: wrap; 
-    align-items: center;
-    justify-content: space-evenly;
-    padding:10px; 
-} 
+
 .restaurant{
     border-radius: 10px 10px 0px 0px;
 }   
