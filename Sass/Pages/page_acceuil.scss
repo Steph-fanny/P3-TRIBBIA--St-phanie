@@ -1,28 +1,11 @@
-.fond_gris_header_horslogo{
-    background-color: $colour-bgc;
-    width: 100%;
-}
+/*----sommaire----
+    -recherche ville
+    -fonctionnement 
+    -restaurant
+    -tablette et pc
 
-.header_subtittle{ 
-    text-align: center;
-    margin:0px;
-}
     
 /*rechercher ville*/
-.container_search_city{
-    @include flex_row;   
-    background-color: darken($colour-bgc,10%);
-    border-top:solid 2px darken($colour-bgc,20%);
-    padding:10px 0px;       
-}
-         
-.fa-map-marker-alt{    
-    height:100%;
-    width: 20px; 
-    color:black;
-    transform:translateX(15px);   
-}
-
 .recherche_ville{
     text-align:center;
     background-color:darken($colour-bgc,10%);
@@ -34,6 +17,10 @@
 .etape{
     padding:5px 0px;    
     }
+
+.descriptif_etape{
+    width: 100%;
+}    
 
 ol {list-style: none; counter-reset: li;
 padding:0px; }
@@ -63,12 +50,6 @@ li {counter-increment: li;
 .restaurant{
     background-color: $colour-bgc;
 }    
-
-.conteneur_liste_restaurant{
-    @include flex_column;   
-    align-items: center;   
-    padding: 0px 10px 25px 10px;
-}
 
 .restaurant_card{
     @include flex_column; 
@@ -112,30 +93,7 @@ li {counter-increment: li;
 .card_footer_descriptif{
     @include flex_column;
 }
-
-.icone_coeur{        
-    opacity:1;   
-    font-size:1.4em;     
-    transition:1s;
-        
-      
-      
-}
-
-.icone_coeur_after{
-    opacity:0;
-    font-size:1.4em;
-    position:absolute;    
-    transition: 1s;  
-    background: -webkit-gradient(linear, left top, left bottom, from($colour_secondary), to($colour_primary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: initial;
-    
-      
-    
-  }
-    
+   
 .card_footer_title,.card_footer_subtitle{
     margin:0px;               
     }
@@ -152,51 +110,46 @@ li {counter-increment: li;
 
 /*TABLETTE et pc*/    
 @media screen and (min-width:768px){
-    .header_logo{
-        width:40%;   
-    }   
+header{    
+    margin:auto;    
+}
+.container_search_city{   
+    padding:10px 0px; 
+}
 
-    header{    
-        margin:auto;    
-    }
-
-    .fond_gris_header_horslogo{
-        background-color: $colour_bgc_textwhite;
-    }
-
-    .container_search_city{   
-        padding:10px 0px; 
-    }
-
-    .fonctionnement_title{
+.fonctionnement_title{
         text-align: center;
         font-size: 1.2em;
-    }
-
-    .secondary_btn{
-        width: 33%;
-    }
-
-    .restaurant_title{
-        font-size: 1.2em;
-        padding-left: 65px;
-    }
+}
     
-    .conteneur_liste_restaurant{   
-        @include flex_row;  
-        flex-wrap: wrap; 
-        align-items: center;
-        justify-content: space-evenly;
-        padding:10px; 
-    } 
-    .restaurant{
-        border-radius: 10px 10px 0px 0px;
-    }   
-    .restaurant_card{
-        width:40%;
-        height: 14em;    
-        margin: 20px;
-    }
+.liste_numerotee{
+    @include flex_row;
+    align-items: center;        
+    width: 100%;
+} 
+.etape{
+    width: 50%;
+}
+.restaurant_title{
+    font-size: 1.2em;
+    padding-left: 65px;
+}
+    
+.conteneur_liste_restaurant{   
+    @include flex_row;  
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-evenly;
+    padding:10px; 
+} 
+.restaurant{
+    border-radius: 10px 10px 0px 0px;
+}   
+.restaurant_card{
+    width:40%;
+    height: 14em;    
+    margin: 20px;
+}
    
 }
 

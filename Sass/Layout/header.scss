@@ -18,11 +18,23 @@ header{
 
 .header_logo{
     width:40%;
-    margin-bottom: 10px;
+    margin-bottom: 10px;       
 } 
 
 /*--page acceuil--*/
+.fond_gris_header_horslogo{
+    background-color: $colour-bgc;
+    width: 100%;
+    /*version tablette*/
+    @media #{$screen-md-min}{
+        background-color: $colour_bgc_textwhite;
+    }      
+}
 
+.header_subtittle{ 
+    text-align: center;
+    margin:0px;
+}
 
 /*--page 2 à 5--*/    
 .header_tittle{

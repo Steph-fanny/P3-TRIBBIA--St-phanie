@@ -5,11 +5,6 @@
     Z-index:1;
     position:relative;
 }   
-.coeur_restau{
-  
-  font-size:1.2em;
-  background-color:$colour-bgc;
-}
 
 .categorie_plat{
     border-bottom: solid 2px $colour_tertiary;
@@ -43,20 +38,14 @@
   height: 100%;
   margin-right: -75px;
   border-radius:0px 12px 12px 0px ;
-  opacity:0%;    
-  overflow:hidden;
+  opacity:0%;      
 }
 
-.icone_check{
-  font-size: 1.6em;
-  color:darken($colour_tertiary,60%);
-  }
-  
 .choix_plat_confirmation_icone{
   transform:rotate(180deg);   
   transition:transform 1s 150ms;
 }
-
+  
 .container_info{
   @include flex_column;
   flex-wrap: wrap;

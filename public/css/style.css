@@ -17,6 +17,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  overflow: hidden;
+}
+
 /*----sommaire----
     -police:
         logo, h1,h2,h3
@@ -97,7 +101,7 @@ p {
 }
 @media screen and (min-width:991px) {
   .primary_btn {
-    width: 40%;
+    width: 50%;
     height: 4em;
   }
 }
@@ -158,16 +162,60 @@ p {
   box-shadow: 0px 2px 3px gray;
   border-radius: 12px;
   width: 100%;
-  height: 6em;
+  height: 4em;
   padding: 0px;
   margin: 10px;
   border: none;
   cursor: pointer;
   animation: apparition_btn 0.6s linear both;
   transform: scale(0);
+  /*version tablette*/
 }
 .btn_choix_plats:hover {
   box-shadow: 0px 4px 6px gray;
+}
+@media screen and (min-width:991px) {
+  .btn_choix_plats {
+    width: 100%;
+    height: 5em;
+  }
+}
+
+.btn_heart_restau {
+  background-color: #e7e4e4;
+}
+
+/*page d'accueil*/
+/*icone localisation recherche ville*/
+.fa-map-marker-alt {
+  height: 100%;
+  width: 20px;
+  color: black;
+  transform: translateX(15px);
+}
+
+.icone_coeur {
+  opacity: 1;
+  font-size: 1.4em;
+  transition: 1s;
+}
+
+.icone_coeur_after {
+  opacity: 0;
+  font-size: 1.4em;
+  position: absolute;
+  transition: 1s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+}
+
+/*page retaurant*/
+/*icone animation choix plat*/
+.icone_check {
+  font-size: 1.6em;
+  color: #10392f;
 }
 
 /*----sommaire----
@@ -195,6 +243,22 @@ header {
 }
 
 /*--page acceuil--*/
+.fond_gris_header_horslogo {
+  background-color: #e7e4e4;
+  width: 100%;
+  /*version tablette*/
+}
+@media screen and (min-width:768px) {
+  .fond_gris_header_horslogo {
+    background-color: white;
+  }
+}
+
+.header_subtittle {
+  text-align: center;
+  margin: 0px;
+}
+
 /*--page 2 à 5--*/
 .header_tittle {
   display: flex;
@@ -295,7 +359,7 @@ header {
     -disparition/ apparition de la page lors du chargement :  
 
   page restaurant:    
-    -apparition plats: @keyframes apparition_btn, apparition plat (1à9)  
+    -apparition plats: @keyframes apparition_btn, apparition plat (1à10)  
     -barre de validation des plats : au survol: partie verte +icone validation en rotation
 */
 /*----loading spinner----*/
@@ -501,6 +565,28 @@ header {
     opacity: 1;
   }
 }
+/*page d'acceuil*/
+/*recherche ville*/
+.container_search_city {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfc9c9;
+  border-top: solid 2px #b7aeae;
+  padding: 10px 0px;
+}
+
+/*liste retaurant*/
+.conteneur_liste_restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+  padding: 0px 10px 25px 10px;
+}
+
 /*titre restaurant et coeur*/
 et .menu-header,
 .subtittle_plat {
@@ -517,6 +603,7 @@ et .menu-header,
   justify-content: center;
   align-items: flex-start;
   align-items: center;
+  width: 100%;
 }
 
 /*tablete et pc*/
@@ -541,34 +628,14 @@ et .menu-header,
     margin: 10px;
   }
 }
-.fond_gris_header_horslogo {
-  background-color: #e7e4e4;
-  width: 100%;
-}
+/*----sommaire----
+    -recherche ville
+    -fonctionnement 
+    -restaurant
+    -tablette et pc
 
-.header_subtittle {
-  text-align: center;
-  margin: 0px;
-}
 
 /*rechercher ville*/
-.container_search_city {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #cfc9c9;
-  border-top: solid 2px #b7aeae;
-  padding: 10px 0px;
-}
-
-.fa-map-marker-alt {
-  height: 100%;
-  width: 20px;
-  color: black;
-  transform: translateX(15px);
-}
-
 .recherche_ville {
   text-align: center;
   background-color: #cfc9c9;
@@ -579,6 +646,10 @@ et .menu-header,
 /*fonctionnement*/
 .etape {
   padding: 5px 0px;
+}
+
+.descriptif_etape {
+  width: 100%;
 }
 
 ol {
@@ -618,15 +689,6 @@ li {
 /*restaurant*/
 .restaurant {
   background-color: #e7e4e4;
-}
-
-.conteneur_liste_restaurant {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-items: center;
-  padding: 0px 10px 25px 10px;
 }
 
 .restaurant_card {
@@ -684,23 +746,6 @@ li {
   align-items: flex-start;
 }
 
-.icone_coeur {
-  opacity: 1;
-  font-size: 1.4em;
-  transition: 1s;
-}
-
-.icone_coeur_after {
-  opacity: 0;
-  font-size: 1.4em;
-  position: absolute;
-  transition: 1s;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: initial;
-}
-
 .card_footer_title, .card_footer_subtitle {
   margin: 0px;
 }
@@ -718,16 +763,8 @@ li {
 
 /*TABLETTE et pc*/
 @media screen and (min-width: 768px) {
-  .header_logo {
-    width: 40%;
-  }
-
   header {
     margin: auto;
-  }
-
-  .fond_gris_header_horslogo {
-    background-color: white;
   }
 
   .container_search_city {
@@ -739,8 +776,17 @@ li {
     font-size: 1.2em;
   }
 
-  .secondary_btn {
-    width: 33%;
+  .liste_numerotee {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .etape {
+    width: 50%;
   }
 
   .restaurant_title {
@@ -777,11 +823,6 @@ li {
   position: relative;
 }
 
-.coeur_restau {
-  font-size: 1.2em;
-  background-color: #e7e4e4;
-}
-
 .categorie_plat {
   border-bottom: solid 2px #99E2D0;
   width: 40px;
@@ -815,12 +856,6 @@ li {
   margin-right: -75px;
   border-radius: 0px 12px 12px 0px;
   opacity: 0%;
-  overflow: hidden;
-}
-
-.icone_check {
-  font-size: 1.6em;
-  color: #10392f;
 }
 
 .choix_plat_confirmation_icone {

@@ -1,3 +1,26 @@
+
+
+/*page d'acceuil*/
+
+/*recherche ville*/
+.container_search_city{
+    @include flex_row;   
+    background-color: darken($colour-bgc,10%);
+    border-top:solid 2px darken($colour-bgc,20%);
+    padding:10px 0px; 
+}
+/*liste retaurant*/
+.conteneur_liste_restaurant{
+    @include flex_column;   
+    align-items: center;   
+    padding: 0px 10px 25px 10px;
+}
+
+
+
+
+
+
 /*titre restaurant et coeur*/ et /*conteneur descriptif_prix*/
 .menu-header,.subtittle_plat{
     @include flex_row;
@@ -8,6 +31,7 @@
 .entree_card,.plat_card,.dessert_card{
     @include flex_column;
     align-items: center;
+    width: 100%;
 }
 
 /*tablete et pc*/

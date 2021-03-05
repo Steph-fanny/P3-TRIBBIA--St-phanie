@@ -1,0 +1,34 @@
+
+
+/*page d'accueil*/
+
+/*icone localisation recherche ville*/
+.fa-map-marker-alt{    
+    height:100%;
+    width: 20px; 
+    color:black;
+    transform:translateX(15px);   
+}
+
+.icone_coeur{        
+    opacity:1;   
+    font-size:1.4em;     
+    transition:1s;      
+}
+.icone_coeur_after{
+    opacity:0;
+    font-size:1.4em;
+    position:absolute;    
+    transition: 1s;  
+    background: -webkit-gradient(linear, left top, left bottom, from($colour_secondary), to($colour_primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;            
+  }
+
+/*page retaurant*/
+/*icone animation choix plat*/ 
+.icone_check{
+    font-size: 1.6em;
+    color:darken($colour_tertiary,60%);
+    }
