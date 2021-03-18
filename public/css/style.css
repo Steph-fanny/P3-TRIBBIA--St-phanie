@@ -372,6 +372,7 @@ header {
   page restaurant:    
     -apparition plats: @keyframes apparition_btn, apparition plat (1à10)  
     -barre de validation des plats : au survol: partie verte +icone validation en rotation
+    -remplissage coeur
 */
 /*----loading spinner----*/
 .spin-container {
@@ -650,7 +651,7 @@ et .menu-header,
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
+    width: 33%;
     margin: 15px 5px;
   }
 
@@ -855,7 +856,7 @@ li {
   text-align: left;
   padding-bottom: 5px;
   font-weight: bolder;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .tittle_plat, .subtittle_plat {
@@ -883,6 +884,24 @@ li {
 .choix_plat_confirmation_icone {
   transform: rotate(180deg);
   transition: transform 1s 150ms;
+}
+
+/*la note enchantée*/
+@media screen and (min-width: 768px) {
+  .plat_note_enchantee, .dessert_note_enchantee {
+    margin-bottom: 50px;
+  }
+
+  .dessert_card_note_enchantee, .plat_card_note_enchantee {
+    margin-bottom: 50px;
+  }
+
+  .detail_subtittle_plat {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

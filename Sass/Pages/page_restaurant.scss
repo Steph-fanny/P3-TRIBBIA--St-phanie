@@ -16,7 +16,7 @@
   text-align: left;
   padding-bottom: 5px;
   font-weight: bolder;
-  font-size: 1.2em;    
+  font-size: 1.1em;    
 }
 
 .tittle_plat,.subtittle_plat{
@@ -46,6 +46,19 @@
   transition:transform 1s 150ms;
 }
   
-  
+/*la note enchantée*/
+@media screen and (min-width:768px){
+  .plat_note_enchantee,.dessert_note_enchantee{
+    margin-bottom:50px;}
+  .dessert_card_note_enchantee,.plat_card_note_enchantee{
+    margin-bottom:50px;
+  }
+ .detail_subtittle_plat{
+    text-overflow: ellipsis;
+    overflow:hidden;
+   white-space: nowrap;
+   width:80%  
+  }
+  } 
 
 
